@@ -15,8 +15,8 @@ volatile DWORD64* isFunctionActiveP = &isFunctionActive;
 volatile DWORD64* activeFunctionP = &activeFunction;
 
 Hook sellFunc = {
-	(DWORD64)GetModuleHandle(NULL) + 0x632C80,		//Function address we're hooking.
-	27,												//Function length.
+	(DWORD64)GetModuleHandle(NULL) + 0x632C80,
+	27,
 	(DWORD64)sellHookThread
 };
 
